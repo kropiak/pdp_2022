@@ -4,7 +4,7 @@
 
 Zanim przejdziemy do omawiania poszczególnych typów danych warto wiedzieć, że Python jest językiem „typowanym dynamicznie”. Oznacza to, że typ danych jaki zostanie wykorzystany do przechowania wartości przypisanej do zmiennej jest ustalony w momencie jej przypisania (operator '=') co znacznie różni się od sposobu w jaki typy są przypisywane do zmiennych w językach takich jak Java czy C++, gdzie w kodzie źródłowym określamy jaki typ danych (typ obiektu) będzie owa zmienna przechowywała.
 
-Takie rozwiązanie ma zarówno wady jak i zalety. Do wad można zaliczyć to, że pierwotny typ zmiennej może ulec zmianie w dalszej części kodu co wymusza na programiście większą kontrolę tego co dzieje się z tą zmienną i czasami trzeba stosować funkcje, które sprawdzają typ przekazanych danych, jeżeli oczekujemy konkretnego typu. Nie możemy też w żaden sposób wymusić przekazania do metody danych określonego typu lub określić jaki typ danych zostanie zwrócony. Możemy jednak określić typ oczekiwany na etapie pisania kodu począwszy od wersji Pythona 3.5 a cały mechanizm nazywa się **type hinting** (zobacz: https://docs.python.org/3.8/library/typing.html). W późniejszym etapie zajęć zostaną zaprezentowane przykłady jego użycia. 
+Takie rozwiązanie ma zarówno wady jak i zalety. Do wad można zaliczyć to, że pierwotny typ zmiennej może ulec zmianie w dalszej części kodu co wymusza na programiście większą kontrolę tego co dzieje się z tą zmienną i czasami trzeba stosować funkcje, które sprawdzają typ przekazanych danych, jeżeli oczekujemy konkretnego typu. Nie możemy też w żaden sposób wymusić przekazania do metody danych określonego typu lub określić jaki typ danych zostanie zwrócony. Możemy jednak określić typ oczekiwany na etapie pisania kodu począwszy od wersji Pythona 3.5 a cały mechanizm nazywa się **type hinting** (zobacz: https://docs.python.org/3.9/library/typing.html). W późniejszym etapie zajęć zostaną zaprezentowane przykłady jego użycia. 
 Zaletą dynamicznego typowania jest większa elastyczność języka i możliwość zmiany typu 'w locie' co eliminuje konieczność jawnego deklarowania nowych zmiennych do przechowywania danych pod postacią innego typu (rzutowanie jawne i niejawne). 
 
 Kolejna istotna informacja jest taka, że Python jest językiem zorientowanym obiektowo i wszystko w Pythonie jest obiektem* o czym świadczy chociażby to, że właściwie wszystkie zmienne posiadają metody, które można na nich wykonać.
@@ -246,7 +246,7 @@ class Osoba:
         self.imie = imie
         self.nazwisko = nazwisko
 
-kr = Osoba('Krzysztof', 'Ropiak')
+kr = Osoba('Jan', 'Kowalski')
 
 print('Tą osobą jest {0.imie} {0.nazwisko}'.format(kr))
 ```
@@ -278,4 +278,3 @@ Po więcej przykładów związanych z formatowaniem łańcuchów można udać si
 „W tekście jest {liczba_liter1} liter {litera_1} oraz {liczba_liter2} liter {litera_2}” . W miejsca {liczba_liter1} oraz {liczba_liter2} podstaw zmienne, które będą przechowywały liczbę wystąpień danych liter (poszukaj odpowiedniej metody dla typu **str**). Litery, które należy wyszukać to 4-ta litera nazwiska oraz 3-cia litera imienia osoby wykonującej ćwiczenie, np. imie = „Krzysztof”, nazwisko = „Ropiak”, litera_1 = imie[2], litera_2 = nazwisko[3].
 
 3.	Przejdź na stronę https://pyformat.info/ a następnie zapisz w oddzielnym pliku .py i wykonaj 5 wybranych przykładów formatowania ciągów oznaczonego jako „New”, których nie było w przykładach z tego podrozdziału (np. z wyrównaniem do prawej lub lewej strony, ilością pozycji liczby, znakiem, wypełnieniem spacji itp.).
-
